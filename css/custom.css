@@ -269,3 +269,70 @@ div#workwithus .w-100 {
 div#workwithus .row.py-vh-5.position-relative.d-flex.justify-content-center.align-items-center {
     background: #0000000a;
 }
+/*MEDIA QUERY*/
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .nombres {
+        /* line-height: 50px; */
+        font-size: 3rem;
+    }
+    
+    div#counter {
+        width: 100%;
+    }
+    
+    span.digit.static {
+        font-size: 2.2rem;
+        letter-spacing: 0;
+    }
+    
+    .boxName {
+        font-size: 12px;
+    }
+    
+    .digit {
+        font-size: 2.2rem;
+    }
+    
+    span.position {
+        width: 20px;
+        height: 1.9rem;
+    }
+    
+    div#aboutus {
+        padding: 30px;
+        margin-top: 30px;
+    }
+    
+    
+    
+    div#aboutus .col-lg-4 {
+        margin-top: 30px;
+    }
+    
+    .agendar.w-100 a {
+        line-height: 25px;
+    }
+    
+    div#workwithus {
+        padding-top: 0;
+    }
+    
+    div#workwithus .row.py-vh-4 {
+        padding-top: 0;
+    }
+    div#top {
+        height: 370px;
+    }
+    .foto-banner{
+
+        background-position: 14% 0;
+        background-size: cover;
+        background-size: 711px;
+        background-repeat: no-repeat;
+    }
+    .digit {
+        font-size: 2.2rem !important;
+    } 
+
+}
