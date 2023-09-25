@@ -269,6 +269,23 @@ div#workwithus .w-100 {
 div#workwithus .row.py-vh-5.position-relative.d-flex.justify-content-center.align-items-center {
     background: #0000000a;
 }
+
+div#myModal button.btn-copy {
+    background: none;
+    color: #484848;
+    border: 0;
+}
+div#myModal p {
+    font-family: 'CalibreMedium';
+    font-size: 19px;
+    margin: 2px;
+    padding: 0;
+}
+
+div#myModal p span {
+    font-family: 'CalibreLight';
+    font-size: 20px;
+}
 /*MEDIA QUERY*/
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -334,5 +351,26 @@ div#workwithus .row.py-vh-5.position-relative.d-flex.justify-content-center.alig
     .digit {
         font-size: 2.2rem !important;
     } 
+    h1.display-1.mt-5.titulo {
+        margin-top: 15px !important;
+        font-size: 2.0rem;
+    }
+    
+    .nombres {
+        padding: 0 15px;
+        font-size: 2.5rem;
+        padding-bottom: 20px;
+    }
+    
+    .display-5.py-4.fecha {
+        font-size: 30px;
+        position: absolute;
+        bottom: -81px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
 
 }

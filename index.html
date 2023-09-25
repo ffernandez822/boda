@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href=".t/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/26_85279.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/26_85279.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/26_85279.ico">
   <meta name="author" content="Holger Koenemann">
   <meta name="generator" content="Eleventy v2.0.0">
   <meta name="HandheldFriendly" content="true">
@@ -21,6 +21,11 @@
   <link href="css/brands.css" rel="stylesheet">
   <link href="css/solid.css" rel="stylesheet">
   <link href="css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
    <style>
 
@@ -122,11 +127,11 @@
       </div>
     </div>
     <div class="col-md-5 offset-md-1">
-      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/webp/f05.jpeg);">
+      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/salon.jpeg);">
       </div>
     </div>
     <div class="col-md-6">
-      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/webp/f06.jpeg);--bs-aspect-ratio: 150%;">
+      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/2021-05-19.jpeg);--bs-aspect-ratio: 150%;">
       </div>
     </div>
   </div>
@@ -139,7 +144,7 @@
   <p data-aos="fade-left" data-aos-delay="200">21:00 HRS</p>
 
   <p>
-  <a href="#" class="btn btn-primary btn-xl shadow me-3 btn-llegar" data-aos="fade-left" data-aos-delay="400">COMO LLEGAR</a>
+  <a href="https://maps.app.goo.gl/1TSf9m9SfN7vFecb8" target="_blank" class="btn btn-primary btn-xl shadow me-3 btn-llegar" data-aos="fade-left" data-aos-delay="400">COMO LLEGAR</a>
   </p>
   
 </div>
@@ -216,9 +221,10 @@
         <div class="col-10 mt-5">
           <p>Lo que más queremos es compartir con vos nuestro gran día, pero si deseas regalarnos algo podés hacer clic en el siguiente botón</p>
           <div class="w-100">
-            <a href="https://forms.gle/BDUhkNagkBCZtuVG9" target="_blank" class="btn-llegar">
+            <a href="https://forms.gle/BDUhkNagkBCZtuVG9" target="_blank" data-toggle="modal" data-target="#myModal" class="btn-llegar">
               Ver información 
             </a>
+            
           </div>
         </div>
       </div>
@@ -244,7 +250,6 @@
  <script>
   let scrollpos = window.scrollY
   const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
 
   const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
   const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
@@ -252,17 +257,64 @@
   window.addEventListener('scroll', function() {
     scrollpos = window.scrollY;
 
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
 
-    console.log(scrollpos)
+    //console.log(scrollpos)
   })
 </script>
 
 <script src="js/jquery.countdown.js"></script>
 <script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<script>
+  // Inicializa Clipboard.js para habilitar la funcionalidad de copia al portapapeles
+  var clipboard = new ClipboardJS('.btn');
+
+  // Maneja el evento de éxito de la copia
+  clipboard.on('success', function(e) {
+      e.clearSelection(); // Deselecciona el texto después de copiarlo
+
+      // Muestra una confirmación o realiza cualquier otra acción que desees
+      alert('Texto copiado: ' + e.text);
+  });
+</script>
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <!-- Encabezado del modal -->
+          <div class="modal-header">
+              <h4 class="modal-title">DATOS BANCARIOS</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Contenido del modal -->
+          <div class="modal-body">
+              <p>Nombre del Titular: <br> <span id="textToCopy1">Facundo Gabriel Fernández</span> <button class="btn btn-primary btn-copy" data-clipboard-target="#textToCopy1">
+                <i class="fas fa-copy"></i> <!-- Icono de copiar -->
+            </button></p>
+            <p>CBU: <br> <span id="textToCopy2">1500054100030014636382</span> <button class="btn btn-primary btn-copy" data-clipboard-target="#textToCopy2">
+              <i class="fas fa-copy"></i> <!-- Icono de copiar -->
+          </button></p>
+          <p>ALIAS: <br> <span id="textToCopy3">NUEZ.PIANO.TRUCO</span> <button class="btn btn-primary btn-copy" data-clipboard-target="#textToCopy3">
+            <i class="fas fa-copy"></i> <!-- Icono de copiar -->
+          </button></p>
+          <p>DNI: <br> <span id="textToCopy4">35.273.608</span> <button class="btn btn-primary btn-copy" data-clipboard-target="#textToCopy4">
+            <i class="fas fa-copy"></i> <!-- Icono de copiar -->
+          </button></p>
+          <p>NRO CUENTA: <br> <span id="textToCopy5">3001463638</span> <button class="btn btn-primary btn-copy" data-clipboard-target="#textToCopy5">
+            <i class="fas fa-copy"></i> <!-- Icono de copiar -->
+          </button></p>
+          <p>BANCO HSBC</p>
+
+
+
+          </div>
+      </div>
+  </div>
+</div>
   </body>
 </html>
