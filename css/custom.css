@@ -102,13 +102,14 @@ div#counter {
 }
 .nombres{
     font-family: DancingScript;
-    font-size: 4.33rem;
+    font-size: 4.33rem !important ;
     color: #f4f4f4;
-    padding: 35px 0;
+    padding: 0;
+    margin-bottom: 3em;
 }
 
 h1.display-1.mt-5.titulo {
-    font-size: 2.33rem;
+    font-size: 3.33rem;
     color: #f4f4f4;
     font-family: 'CalibreMedium';
 }
@@ -286,6 +287,24 @@ div#myModal p span {
     font-family: 'CalibreLight';
     font-size: 20px;
 }
+div#gallery .row.overflow-scroll .col-md-3 {
+    height: 480px;
+    overflow: hidden;
+}
+
+div#gallery .row.overflow-scroll .col-md-3:nth-child(3) img {
+    position: relative;
+    top: -11%;
+}
+div#gallery .row.overflow-scroll .col-md-3:nth-child(1) img {
+    position: relative;
+    top: -11%;
+}
+
+div#gallery .row.overflow-scroll .col-md-3:nth-child(2) img {
+    position: relative;
+    top: -11%;
+}
 /*MEDIA QUERY*/
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -358,19 +377,35 @@ div#myModal p span {
     
     .nombres {
         padding: 0 15px;
-        font-size: 2.5rem;
+        font-size: 2.5rem !important;
         padding-bottom: 20px;
+        margin-bottom: 0;
     }
     
     .display-5.py-4.fecha {
         font-size: 30px;
-        position: absolute;
         bottom: -81px;
-        /* display: flex; */
         justify-content: center;
         align-items: center;
-        width: 100%;
-        text-align: center;
+    }
+    svg.aos-init.aos-animate {
+        height: 86px;
+    }
+    
+    .mt-4.d-flex.justify-content-center.aos-init.aos-animate {
+        margin-top: 0 !important;
+    }
+    div#asistencia h1.display-1.fw-bold {
+        font-size: 4rem;
+    }
+    
+    div#asistencia p {
+        line-height: 23px;
+    }
+    
+    .agendar.w-100 a {
+        padding: 16px 20px;
+        line-height: inherit;
     }
 
 }
