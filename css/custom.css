@@ -305,6 +305,10 @@ div#gallery .row.overflow-scroll .col-md-3:nth-child(2) img {
     position: relative;
     top: -11%;
 }
+i.icon-regalo {
+    color: #484848;
+    font-size: 6em;
+}
 /*MEDIA QUERY*/
 
 @media (min-width: 300px) and (max-width: 768px) {
